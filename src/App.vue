@@ -19,89 +19,83 @@
         </tr>
         <tr>
           <td>
-            <button type="button" class="btn btn-warning">MC</button>
+            <MyButton symbol="MC" btnColor="warning" />
           </td>
           <td>
-            <button type="button" class="btn btn-warning">MR</button>
+            <MyButton symbol="MR" btnColor="warning" />
           </td>
           <td>
-            <button type="button" class="btn btn-warning">M-</button>
+            <MyButton symbol="M-" btnColor="warning" />
           </td>
           <td>
-            <button type="button" class="btn btn-warning">M+</button>
+            <MyButton symbol="M+" btnColor="warning" />
           </td>
           <td>
-            <button type="button" class="btn btn-light">
+            <MyButton btnColor="default">
               <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-            </button>
+            </MyButton>
           </td>
         </tr>
         <tr>
           <td>
-            <button type="button" class="btn btn-light">7</button>
+            <MyButton symbol="7" btnColor="default" />
           </td>
           <td>
-            <button type="button" class="btn btn-light">8</button>
+            <MyButton symbol="8" btnColor="default" />
           </td>
           <td>
-            <button type="button" class="btn btn-light">9</button>
+            <MyButton symbol="9" btnColor="default" />
           </td>
           <td>
-            <button type="button" class="btn btn-secondary">÷</button>
+            <MyButton symbol="÷" btnColor="secondary" />
           </td>
           <td>
-            <button type="button" class="btn btn-light">+/-</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button type="button" class="btn btn-light">4</button>
-          </td>
-          <td>
-            <button type="button" class="btn btn-light">5</button>
-          </td>
-          <td>
-            <button type="button" class="btn btn-light">6</button>
-          </td>
-          <td>
-            <button type="button" class="btn btn-secondary">x</button>
-          </td>
-          <td>
-            <button type="button" class="btn btn-secondary">-</button>
+            <MyButton symbol="+/-" btnColor="default" />
           </td>
         </tr>
         <tr>
           <td>
-            <button
-              v-on:click="showNumber(1)"
-              type="button"
-              class="btn btn-light"
-            >
-              1
-            </button>
+            <MyButton symbol="4" btnColor="default" />
           </td>
           <td>
-            <button type="button" class="btn btn-light">2</button>
+            <MyButton symbol="5" btnColor="default" />
           </td>
           <td>
-            <button type="button" class="btn btn-light">3</button>
+            <MyButton symbol="6" btnColor="default" />
+          </td>
+          <td>
+            <MyButton symbol="x" btnColor="secondary" />
+          </td>
+          <td>
+            <MyButton symbol="-" btnColor="secondary" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <MyButton :symbol="1" btnColor="default" />
+          </td>
+          <td>
+            <MyButton :symbol="2" btnColor="default" />
+          </td>
+          <td>
+            <MyButton :symbol="3" btnColor="default" />
           </td>
           <td rowspan="2">
-            <button type="button" class="btn btn-secondary long-btn">+</button>
+            <MyButton symbol="+" btnColor="secondary" />
           </td>
           <td rowspan="2">
-            <button type="button" class="btn btn-primary long-btn">=</button>
+            <MyButton symbol="=" btnColor="primary" />
           </td>
         </tr>
         <tr>
-          <td>
-            <button type="button" class="btn btn-danger">C</button>
+          <td rowspan="2">
+            <MyButton symbol="C" btnColor="danger" />
           </td>
-          <td>
-            <button type="button" class="btn btn-light">0</button>
+          <td rowspan="2">
+            <MyButton symbol="0" btnColor="default" />
           </td>
-          <td>
-            <button type="button" class="btn btn-light">.</button>
+          <td rowspan="2">
+            <MyButton symbol="." btnColor="default" />
           </td>
         </tr>
       </table>
@@ -113,9 +107,12 @@
 </template>
 
 <script>
+import MyButton from "./components/MyButton.vue";
 export default {
-  name: 'App',
-  components: {},
+  name: "App",
+  components: {
+    MyButton,
+  },
   data() {
     return {
       // This is the private data section which can be used inside this component
