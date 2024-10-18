@@ -1,10 +1,8 @@
 <template>
-  <td>
-    <button type="button" class="btn" :class="btnColorClass">
-      {{ symbol }}
-      <slot></slot>
-    </button>
-  </td>
+  <button type="button" class="btn" :class="btnColorClass">
+    {{ symbol }}
+    <slot></slot>
+  </button>
 </template>
 <script>
 export default {
