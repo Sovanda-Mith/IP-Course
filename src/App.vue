@@ -18,85 +18,39 @@
           </td>
         </tr>
         <tr>
-          <td>
-            <MyButton symbol="MC" btnColor="warning" />
-          </td>
-          <td>
-            <MyButton symbol="MR" btnColor="warning" />
-          </td>
-          <td>
-            <MyButton symbol="M-" btnColor="warning" />
-          </td>
-          <td>
-            <MyButton symbol="M+" btnColor="warning" />
-          </td>
-          <td>
-            <MyButton btnColor="default">
-              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-            </MyButton>
-          </td>
+          <MyButton symbol="MC" btnColor="warning" />
+          <MyButton symbol="MR" btnColor="warning" />
+          <MyButton symbol="M-" btnColor="warning" />
+          <MyButton symbol="M+" btnColor="warning" />
+          <MyButton symbol="" btnColor="default">
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+          </MyButton>
         </tr>
         <tr>
-          <td>
-            <MyButton symbol="7" btnColor="default" />
-          </td>
-          <td>
-            <MyButton symbol="8" btnColor="default" />
-          </td>
-          <td>
-            <MyButton symbol="9" btnColor="default" />
-          </td>
-          <td>
-            <MyButton symbol="÷" btnColor="secondary" />
-          </td>
-          <td>
-            <MyButton symbol="+/-" btnColor="default" />
-          </td>
+          <MyButton symbol="7" btnColor="default" />
+          <MyButton symbol="8" btnColor="default" />
+          <MyButton symbol="9" btnColor="default" />
+          <MyButton symbol="÷" btnColor="secondary" />
+          <MyButton symbol="+/-" btnColor="default" />
         </tr>
         <tr>
-          <td>
-            <MyButton symbol="4" btnColor="default" />
-          </td>
-          <td>
-            <MyButton symbol="5" btnColor="default" />
-          </td>
-          <td>
-            <MyButton symbol="6" btnColor="default" />
-          </td>
-          <td>
-            <MyButton symbol="x" btnColor="secondary" />
-          </td>
-          <td>
-            <MyButton symbol="-" btnColor="secondary" />
-          </td>
+          <MyButton symbol="4" btnColor="default" />
+          <MyButton symbol="5" btnColor="default" />
+          <MyButton symbol="6" btnColor="default" />
+          <MyButton symbol="x" btnColor="secondary" />
+          <MyButton symbol="-" btnColor="secondary" />
         </tr>
         <tr>
-          <td>
-            <MyButton :symbol="1" btnColor="default" />
-          </td>
-          <td>
-            <MyButton :symbol="2" btnColor="default" />
-          </td>
-          <td>
-            <MyButton :symbol="3" btnColor="default" />
-          </td>
-          <td rowspan="2">
-            <MyButton symbol="+" btnColor="secondary" />
-          </td>
-          <td rowspan="2">
-            <MyButton symbol="=" btnColor="primary" />
-          </td>
+          <MyButton symbol="1" btnColor="default" />
+          <MyButton symbol="2" btnColor="default" />
+          <MyButton symbol="3" btnColor="default" />
+          <MyButton symbol="+" btnColor="secondary" />
+          <MyButton symbol="=" btnColor="primary" />
         </tr>
         <tr>
-          <td rowspan="2">
-            <MyButton symbol="C" btnColor="danger" />
-          </td>
-          <td rowspan="2">
-            <MyButton symbol="0" btnColor="default" />
-          </td>
-          <td rowspan="2">
-            <MyButton symbol="." btnColor="default" />
-          </td>
+          <MyButton symbol="C" btnColor="danger" />
+          <MyButton symbol="0" btnColor="default" />
+          <MyButton symbol="." btnColor="default" />
         </tr>
       </table>
     </div>
