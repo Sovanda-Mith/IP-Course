@@ -1,5 +1,10 @@
 <template>
-  <button type="button" class="btn" :class="btnColorClass">
+  <button
+    type="button"
+    class="btn"
+    :class="btnColorClass"
+    @click="$emit('btn-click')"
+  >
     {{ symbol }}
     <slot></slot>
   </button>
