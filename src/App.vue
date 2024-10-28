@@ -94,7 +94,7 @@ export default {
       if (this.result !== "") {
         this.lastInput = "";
       }
-      this.result = "0";
+      this.result = "";
     },
     sign() {
       this.lastInput =
@@ -108,6 +108,9 @@ export default {
       this.inputNumber = number;
     },
     setPrevious() {
+      if (this.result && !this.lastInput) {
+        this.lastInput = this.result;
+      }
       this.previousInput = this.lastInput;
       this.operatorClick = true;
     },
