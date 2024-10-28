@@ -2,12 +2,16 @@
   <div id="app">
     <div class="container">
       <div>
+        <p>result {{ result }}</p>
+        <p>previousInput {{ previousInput }}</p>
+        <p>lastInput {{ lastInput }}</p>
         <div id="screen">
           <span id="screen_top">M=0</span>
           <div id="screen_bottom">
             <!-- v-text is a directive that is used to replace the content of HTML tag with private data -->
             <!-- It will update the content automatically when data is changed. It is called data reactive -->
-            <span id="operand1">{{ lastInput || "0" }}</span>
+            <span id="operand1" v-if="lastInput !== ''">{{ lastInput }}</span>
+            <span id="operand1" v-else>{{ result || "0" }}</span>
             <span id="operator"></span>
             <span id="operand2"></span>
           </div>
@@ -82,11 +86,15 @@ export default {
       lastInput: "",
       operator: null,
       operatorClick: false,
+      result: null,
     };
   },
   methods: {
     clearInput() {
-      this.lastInput = "";
+      if (this.result !== "") {
+        this.lastInput = "";
+      }
+      this.result = "0";
     },
     sign() {
       this.lastInput =
@@ -137,6 +145,8 @@ export default {
         parseFloat(this.lastInput)
       )}`;
       this.previousInput = null;
+      this.result = this.lastInput;
+      this.lastInput = "";
     },
     backspace() {
       this.lastInput = this.lastInput.slice(0, -1);
