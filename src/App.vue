@@ -48,7 +48,7 @@
           />
         </div>
         <div class="normal">
-          <MyButton symbol="" btnColor="default">
+          <MyButton symbol="" btnColor="default" @btn-click="backspace">
             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
           </MyButton>
           <MyButton symbol="+/-" btnColor="default" @btn-click="sign" />
@@ -137,6 +137,9 @@ export default {
         parseFloat(this.lastInput)
       )}`;
       this.previousInput = null;
+    },
+    backspace() {
+      this.lastInput = this.lastInput.slice(0, -1);
     },
   },
 };
